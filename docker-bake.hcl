@@ -100,13 +100,6 @@ target "vendor" {
   output = ["."]
 }
 
-target "gomod-outdated" {
-  inherits = ["_common"]
-  dockerfile = "./hack/vendor.Dockerfile"
-  target = "outdated"
-  output = ["type=cacheonly"]
-}
-
 target "docs" {
   dockerfile = "./hack/docs.Dockerfile"
   target = "release"
